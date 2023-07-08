@@ -40,9 +40,6 @@ func GetMiddle(s string) string {
 	if len(s)%2 != 0 {
 		midString = s[len(s)/2 : len(s)/2+1]
 	}
-	if len(s) == 1 {
-		midString = s
-	}
 	fmt.Println("midString:", midString)
 	return midString
 }
