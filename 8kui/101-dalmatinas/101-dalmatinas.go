@@ -8,13 +8,11 @@ depending on the number of dogs he has.
 The number of dogs will always be a number and there will always be at least 1 dog.
 Good luck! */
 
-package main
+package kata
 
-import "fmt"
-
-func main() {
+/* func main() {
 	fmt.Println(HowManyDalmatians(101))
-}
+} */
 
 func HowManyDalmatians(number int) string {
 	dogs := []string{"Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"}
