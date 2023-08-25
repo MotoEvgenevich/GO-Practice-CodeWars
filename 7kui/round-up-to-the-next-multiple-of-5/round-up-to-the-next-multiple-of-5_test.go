@@ -49,7 +49,7 @@ var tests = []SolveTest{
 	},
 }
 
-func TestSumEvenFibonacci(t *testing.T) {
+func TestRoundToNext5(t *testing.T) {
 	for _, test := range tests {
 		output := RoundToNext5(test.N)
 		if output != test.Expected {
@@ -58,13 +58,13 @@ func TestSumEvenFibonacci(t *testing.T) {
 	}
 }
 
-func BenchmarkSumEvenFibonacci(b *testing.B) {
+func BenchmarkRoundToNext5(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		RoundToNext5(20)
 	}
 }
 
-func ExampleSumEvenFibonacci() {
+func ExampleRoundToNext5() {
 	fmt.Println(RoundToNext5(554))
 	// Output: 555
 }
