@@ -1,12 +1,52 @@
 package kata
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSizeToNumber(t *testing.T) {
-	fmt.Println(SizeToNumber("xxxl"))
+	{
+		result, resBool := SizeToNumber("")
+		expected, expBool := 0, false
+		assert.Equal(t, result, expected, "Сравнение номеров")
+		assert.Equal(t, resBool, expBool, "Ошибка логики")
+	}
+	{
+		result, resBool := SizeToNumber("xm")
+		expected, expBool := 0, false
+		assert.Equal(t, result, expected, "Сравнение номеров")
+		assert.Equal(t, resBool, expBool, "Ошибка логики")
+	}
+	{
+		result, resBool := SizeToNumber("xxxm")
+		expected, expBool := 0, false
+		assert.Equal(t, result, expected, "Сравнение номеров")
+		assert.Equal(t, resBool, expBool, "Ошибка логики")
+	}
+	{
+		result, resBool := SizeToNumber("xxxx")
+		expected, expBool := 0, false
+		assert.Equal(t, result, expected, "Сравнение номеров")
+		assert.Equal(t, resBool, expBool, "Ошибка логики")
+	}
+	{
+		result, resBool := SizeToNumber("ssss")
+		expected, expBool := 0, false
+		assert.Equal(t, result, expected, "Сравнение номеров")
+		assert.Equal(t, resBool, expBool, "Ошибка логики")
+	}
+	{
+		result, resBool := SizeToNumber("hello world")
+		expected, expBool := 0, false
+		assert.Equal(t, result, expected, "Сравнение номеров")
+		assert.Equal(t, resBool, expBool, "Ошибка логики")
+	}
+	result, resBool := SizeToNumber("xxxxxxxxxxxxxxxxxxxxxxxxxxxl")
+	expected, expBool := 94, true
+	assert.Equal(t, result, expected, "Сравнение номеров")
+	assert.Equal(t, resBool, expBool, "Ошибка логики")
 }
 
 /*
