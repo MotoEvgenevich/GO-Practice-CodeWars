@@ -1,12 +1,37 @@
 package kata
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCalc(t *testing.T) {
-	fmt.Println(Calc("abcdef"))
+	{
+		result := Calc("aaaaaddddr")
+		expect := 30
+		assert.Equal(t, result, expect, "не соотвествует звачения result и expect")
+	}
+	{
+		result := Calc("abcdef")
+		expect := 6
+		assert.Equal(t, result, expect, "не соотвествует звачения result и expect")
+	}
+	{
+		result := Calc("ifkhchlhfd")
+		expect := 6
+		assert.Equal(t, result, expect, "не соотвествует звачения result и expect")
+	}
+	{
+		result := Calc("jfmgklf8hglbe")
+		expect := 6
+		assert.Equal(t, result, expect, "не соотвествует звачения result и expect")
+	}
+	{
+		result := Calc("jaam")
+		expect := 12
+		assert.Equal(t, result, expect, "не соотвествует звачения result и expect")
+	}
 }
 
 /*

@@ -1,37 +1,25 @@
 package kata
 
 import (
-	"fmt"
 	"strconv"
 )
 
 func Calc(s string) int {
 	numStr := ""
-	numStr2 := ""
-	var total2 int
+	total1 := 0
+	total2 := 0
 	for _, v := range s {
 		numStr += strconv.Itoa(int(v))
-		fmt.Println("V:", v)
 	}
-	fmt.Println("numStr:", numStr)
-	total1, err := strconv.Atoi(numStr)
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(total1)
 	for _, v := range numStr {
-		if v == '7' {
-			numStr2 += "1"
+		num, _ := strconv.Atoi(string(v))
+		total1 += num
+		if num == 7 {
+			total2 += 1
 			continue
 		}
-		numStr2 += string(v)
+		total2 += num
 	}
-	fmt.Println("numStr2", numStr2)
-	total2, _ = strconv.Atoi(numStr2)
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println("total2:", total2)
 	return total1 - total2
 }
 
