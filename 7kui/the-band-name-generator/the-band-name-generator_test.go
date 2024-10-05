@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestbandNameGenerator(t *testing.T) {
+func TestBandNameGenerator(t *testing.T) {
 	{
 		result := bandNameGenerator("knife")
 		expect := "The Knife"
