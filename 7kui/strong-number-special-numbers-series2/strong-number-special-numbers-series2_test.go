@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestStrong(t *testing.T) {
+func TestStrongFunc(t *testing.T) {
 	t.Run("Test Strong", func(t *testing.T) {
 		assert.Equal(t, "STRONG!!!!", Strong(1))
 		assert.Equal(t, "STRONG!!!!", Strong(2))
