@@ -1,12 +1,9 @@
 package kata
 
 func Potatoes(p0, w0, p1 int) int {
-
-	dryMatterInitial := float64(w0) * float64(100-p0) / 100.0
-
-	w1 := dryMatterInitial * 100 / float64(100-p1)
-
-	return int(w1)
+	dryMatterInitial := w0 * (100 - p0)
+	w1 := dryMatterInitial / (100 - p1)
+	return w1
 }
 
 /*
