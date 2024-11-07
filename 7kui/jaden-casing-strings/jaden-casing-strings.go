@@ -2,18 +2,19 @@ package kata
 
 import (
 	"strings"
+
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
 )
 
 func ToJadenCase(str string) string {
-	result := ""
-	for i, v := range str {
-		if v == 32 {
-			result += strings.ToUpper(string((str[i+1])))
-		}
-		result += string(v)
+	words := strings.Split(str, " ")
+	var result string
+	for _, word := range words {
+		result += cases.Upper(language.English).String(word[0:1]) + word[1:] + " "
 	}
 
-	return result // your code here...
+	return result[:len(result)-1]
 }
 
 /* Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013).

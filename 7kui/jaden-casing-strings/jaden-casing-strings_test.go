@@ -3,6 +3,8 @@ package kata
 import (
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 type SolveData struct {
@@ -33,6 +35,24 @@ var testData = []SolveData{
 	},
 }
 
+func TestToJadenCaseLength(t *testing.T) {
+	{
+		result := ToJadenCase("All the rules in this world were made by someone no smarter than you. So make your own.")
+		expect := "All The Rules In This World Were Made By Someone No Smarter Than You. So Make Your Own."
+		assert.Equal(t, result, expect, "result doesn't equal expect")
+	}
+	{
+		result := ToJadenCase("When I die. then you will realize")
+		expect := "When I Die. Then You Will Realize"
+		assert.Equal(t, result, expect, "result doesn't equal expect")
+	}
+	{
+		result := ToJadenCase("Jonah Hill is a genius")
+		expect := "Jonah Hill Is A Genius"
+		assert.Equal(t, result, expect, "result doesn't equal expect")
+	}
+
+}
 func TestToJadenCase(t *testing.T) {
 	for _, test := range testData {
 		output := ToJadenCase(test.Str)
