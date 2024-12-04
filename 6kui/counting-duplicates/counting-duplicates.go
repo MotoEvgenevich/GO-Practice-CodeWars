@@ -15,7 +15,7 @@ func Duplicate_count(s1 string) int {
 			count++
 		}
 	}
-	return count //Instead of returning '1', you have to return integer 'i' as answer of solution.
+	return count
 }
 
 /*
