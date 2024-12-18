@@ -44,11 +44,7 @@ func TestLastDigit(t *testing.T) {
 		expect := 1
 		assert.Equal(t, expect, result, "result value doesn't equal expect value")
 	}
-	{
-		result := LastDigit([]int{2, 2, 2, 0})
-		expect := 4
-		assert.Equal(t, expect, result, "result value doesn't equal expect value")
-	}
+
 	{
 		result := LastDigit([]int{937640, 767456, 981242})
 		expect := 0
@@ -74,6 +70,13 @@ func TestSingle(t *testing.T) {
 	{
 		result := LastDigit([]int{0, 0, 0})
 		expect := 0
+		assert.Equal(t, expect, result, "result value doesn't equal expect value")
+	}
+}
+func TestLast(t *testing.T) {
+	{
+		result := LastDigit([]int{2, 2, 2, 0})
+		expect := 4
 		assert.Equal(t, expect, result, "result value doesn't equal expect value")
 	}
 }
